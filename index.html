@@ -26,8 +26,10 @@
         <nav class="navigation">
           <a class="logo" href="./index.html">Web<span style="color: #000000">Studio</span></a>
           <ul class="nav-list">
-            <li class="nav-item"><a class="nav-link current" href="">Студия</a></li>
-            <li class="nav-item"><a class="nav-link" href="./portfolio.html">Портфолио</a></li>
+            <li class="nav-item"><a class="nav-link highlight current" href="">Студия</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./portfolio.html">Портфолио</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="">Контакты</a></li>
           </ul>
         </nav>
@@ -59,7 +61,16 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button class="btn" type="button">Заказать услугу</button>
+          <button class="btn" type="button" data-modal-open>Заказать услугу</button>
+          <div class="backdrop" data-modal>
+            <div class="modal-wrapper">
+              <button class="modal-btn" type="button" data-modal-close>
+                <svg width="18" height="18">
+                  <use href="./images/sprite.svg#close-button"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Секция Особенности -->
@@ -127,6 +138,7 @@
                 alt="печатает на компьютере"
                 width="370"
               />
+              <p class="examples-item-text">Десктопные приложения</p>
             </li>
             <li class="examples-item">
               <img
@@ -135,6 +147,7 @@
                 alt="смотрит в телефон"
                 width="370"
               />
+              <p class="examples-item-text">Мобильные приложения</p>
             </li>
             <li class="examples-item">
               <img
@@ -143,6 +156,7 @@
                 alt="смотрит в планшет"
                 width="370"
               />
+              <p class="examples-item-text">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -579,5 +593,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
